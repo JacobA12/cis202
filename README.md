@@ -1,2 +1,1 @@
-# cis202
-# cis202
+All labs for CIS202 at VVC
