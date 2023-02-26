@@ -4,7 +4,7 @@
 #include <fstream>
 #include <vector>
 using namespace std;
-
+//makes main cleaner if this is up here
 char letterGradeConversion(double examScore)
 {
    if (examScore >= 90)
@@ -44,6 +44,7 @@ int main()
 
    /* TODO: Read a file name from the user and read the tsv file here. */
    cin >> fileName;
+   //opening tsv
    inFS.open(fileName);
    if (!inFS.is_open())
    {
@@ -51,6 +52,8 @@ int main()
    }
 
    /* TODO: Compute student grades and exam averages, then output results to a text file here. */
+
+   //control structure to add data from tsv to vectors
    while (inFS)
    {
       string currentLastName, currentFirstName;
@@ -69,7 +72,7 @@ int main()
       }
    }
    inFS.close();
-
+   //beginning of output to "report.txt"
    ofstream outFS;
    outFS.open("report.txt");
 
@@ -78,19 +81,36 @@ int main()
       return 1;
    }
 
-   double currentMidtermAvg2 = 0.0;
-   double currentFinalAvg = 0.0;
-   double currentMidtermAvg1 = 0.0;
+   double midtermAvg1 = 0.0;
+   double midtermAvg2 = 0.0;
+   double finalAvg = 0.0;
 
-   for (int i = 0; i < firstName.size(); i++)
+   int numStudents = firstName.size();
+   //file output control structure
+   for (int i = 0; i < numStudents; i++)
    {
       double avgScore = (midtermScores1[i] + midtermScores2[i] + finalExamScores[i]) / 3.0;
       char letterGrade = letterGradeConversion(avgScore);
+
+      midtermAvg1 += midtermScores1[i];
+      midtermAvg2 += midtermScores2[i];
+      finalAvg += finalExamScores[i];
 
       outFS << lastName[i] << '\t' << firstName[i] << '\t'
             << midtermScores1[i] << '\t' << midtermScores2[i] << '\t'
             << finalExamScores[i] << '\t' << letterGrade << endl;
    }
 
+   //testAvg calc
+   midtermAvg1 /= numStudents;
+   midtermAvg2 /= numStudents;
+   finalAvg /= numStudents;
+
+   //final output for testAvg
+   outFS << "Averages: midterm1 " << fixed << setprecision(2) << midtermAvg1
+         << ", midterm2 " << fixed << setprecision(2) << midtermAvg2
+         << ", final " << fixed << setprecision(2) << finalAvg << endl;
+
+   outFS.close();
    return 0;
 }
