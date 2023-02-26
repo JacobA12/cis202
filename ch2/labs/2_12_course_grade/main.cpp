@@ -103,7 +103,8 @@ int main()
             << midtermScores1[i] << '\t' << midtermScores2[i] << '\t'
             << finalExamScores[i] << '\t' << letterGrade << endl;
    }
-
+   //whitespace
+   outFS << endl;
    // testAvg calc
    midtermAvg1 /= numStudents;
    midtermAvg2 /= numStudents;
