@@ -9,8 +9,14 @@ int main() {
 
    /* TODO: Declare any necessary variables here. */
    ifstream inFS;
+   string fileName;
+
+
    double averageScore;
-      
+   string lastName;
+   string firstName;
+   vector<int> examScores;
+   char letterGrade;
       
    /* TODO: Read a file name from the user and read the tsv file here. */
    
