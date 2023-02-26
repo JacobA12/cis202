@@ -53,8 +53,34 @@ int main()
    /* TODO: Compute student grades and exam averages, then output results to a text file here. */
    while (inFS)
    {
-      string currentLastName;
-      string currentFirstName;
+      string currentLastName, currentFirstName;
+      int currentMidterm1, currentMidterm2, currentFinal;
+
+      inFS >> currentLastName >> currentFirstName >> currentMidterm1 >> currentMidterm2 >> currentFinal;
+
+      if (inFS)
+      {
+         firstName.push_back(currentFirstName);
+         lastName.push_back(currentLastName);
+
+         midtermScores1.push_back(currentMidterm1);
+         midtermScores2.push_back(currentMidterm2);
+         finalExamScores.push_back(currentFinal);
+      }
    }
+   inFS.close();
+
+   ofstream outFS;
+   outFS.open("report.txt");
+
+   if (!outFS.is_open())
+   {
+      return 1;
+   }
+
+   double currentMidtermAvg2 = 0.0;
+   double currentFinalAvg = 0.0;
+   double currentMidtermAvg1 = 0.0;
+
    return 0;
 }
