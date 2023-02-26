@@ -8,6 +8,8 @@ using namespace std;
 int main() {
 
    /* TODO: Declare any necessary variables here. */
+   ifstream inFS;
+   double averageScore;
       
       
    /* TODO: Read a file name from the user and read the tsv file here. */
