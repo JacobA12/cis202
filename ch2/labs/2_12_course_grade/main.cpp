@@ -82,5 +82,15 @@ int main()
    double currentFinalAvg = 0.0;
    double currentMidtermAvg1 = 0.0;
 
+   for (int i = 0; i < firstName.size(); i++)
+   {
+      double avgScore = (midtermScores1[i] + midtermScores2[i] + finalExamScores[i]) / 3.0;
+      char letterGrade = letterGradeConversion(avgScore);
+
+      outFS << lastName[i] << '\t' << firstName[i] << '\t'
+            << midtermScores1[i] << '\t' << midtermScores2[i] << '\t'
+            << finalExamScores[i] << '\t' << letterGrade << endl;
+   }
+
    return 0;
 }
