@@ -19,7 +19,7 @@ char letterGradeConversion(double examScore)
    {
       return 'C';
    }
-   else if (score >= 60)
+   else if (examScore >= 60)
    {
       return 'D';
    }
