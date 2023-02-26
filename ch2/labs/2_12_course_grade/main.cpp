@@ -36,13 +36,11 @@ int main()
    ifstream inFS;
    string fileName;
 
-   double averageScore;
-   int midterm1;
-   int midterm2;
-   int finalExam;
-   string lastName;
-   string firstName;
-   char letterGrade;
+   vector<string> firstName;
+   vector<string> lastName;
+   vector<int> midtermScores1;
+   vector<int> midtermScores2;
+   vector<int> finalExamScores;
 
    /* TODO: Read a file name from the user and read the tsv file here. */
    cin >> fileName;
@@ -53,6 +51,10 @@ int main()
    }
 
    /* TODO: Compute student grades and exam averages, then output results to a text file here. */
-
+   while (inFS)
+   {
+      string currentLastName;
+      string currentFirstName;
+   }
    return 0;
 }
