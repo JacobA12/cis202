@@ -3,9 +3,23 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
 
    /* Type your code here. */
+   ifstream inFS;
+
+   string fileName;
+   string currentLine;
+
+   cin >> fileName;
+
+   inFS.open(fileName);
+
+   while (getline(inFS, currentLine))
+   {
+   
+   }
 
    return 0;
 }
