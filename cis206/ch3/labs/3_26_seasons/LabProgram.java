@@ -15,6 +15,13 @@ public class LabProgram {
       switch (inputMonth) {
          case "january":
          case "february":
+            if (inputDay <= 0) {
+               season = "Invalid";
+               break;
+            } else if (inputDay > 31) {
+               season = "Invalid";
+               break;
+            }
             season = "Winter";
             break;
          case "march":
@@ -40,6 +47,10 @@ public class LabProgram {
             season = "Summer";
             break;
          case "september":
+            if (inputDay >= 31) {
+               season = "Invalid";
+               break;
+            }
             if (inputDay <= 21) {
                season = "Summer";
             } else {
@@ -51,6 +62,10 @@ public class LabProgram {
             season = "Autumn";
             break;
          case "december":
+            if (inputDay <= 0) {
+               season = "Invalid";
+               break;
+            }
             if (inputDay <= 20) {
                season = "Autumn";
             } else {
