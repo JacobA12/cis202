@@ -67,13 +67,13 @@ int main () {
    currNode = new BookNode(bookTitle, bookAuthor, bookISBN);
    // TODO: Call LL_Library's InsertSorted() method to insert currNode and return
    //       the number of operations performed
-
+   cout << "Number of linked list book copy operations: " << linkedListLibrary.InsertSorted(currNode, linkedListOperations) << endl;
 
    // Insert into VectorList
    tempBook  = Book(bookTitle, bookAuthor, bookISBN);
    // TODO: Call VectorLibrary's InsertSorted() method to insert tempBook and return
    //       the number of operations performed
-
+      cout << "Number of vector book copy operations: " << vectorLibrary.InsertSorted(tempBook, vectorOperations) << endl;
    // TODO: Print number of operations for linked list
 
    // TODO: Print number of operations for vector
