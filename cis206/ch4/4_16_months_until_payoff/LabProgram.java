@@ -7,7 +7,7 @@ public class LabProgram {
       double paymentAmount = scnr.nextDouble();
       double interestRate = scnr.nextDouble();
       int count = 0;
-
+      scnr.close();
       while (loanAmount > 0) {
          double interestAmount = loanAmount * interestRate;
 
