@@ -14,7 +14,7 @@ public class LabProgram {
       for (int i = 0; i < numElements; i++) {
          userList[i] = scnr.nextInt();
       }
-
+      scnr.close();
      
       for (int i = 0; i < numElements; i++) {
          reverseList[i] = userList[numElements - 1 - i];
