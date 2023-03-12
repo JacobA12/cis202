@@ -9,13 +9,15 @@ public class LabProgram {
       int[] userList = new int[numElements]; // List of numElement integers specified by the user
       // Add more variables as needed
       int[] reverseList = new int[numElements];
-      int userNum;
+      
 
 
       /* Type your code here. */
-      for (int i = numElements; i >= 0; i--) {
+      for(int i = 0; i < numElements; i++){
+         userList[i] = scnr.nextInt();
+      }
+      for (int i = numElements - 1; i >= 0; i--) {
          for (int j = 0; j < numElements; j++) {
-            userNum = scnr.nextInt();
             reverseList[j] = userList[i];
          }
       }
