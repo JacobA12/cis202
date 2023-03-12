@@ -24,5 +24,6 @@ public class LabProgram {
       for (int i = 0; i < reverseList.length; i++) {
          System.out.print(reverseList[i] + ",");
       }
+      System.out.println();
    }
 }
